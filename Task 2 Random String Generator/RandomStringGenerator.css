@@ -1,0 +1,238 @@
+.random-string-generator {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.generator-container {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.main-string-display {
+  background: white;
+  border-radius: 10px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.main-string-display h2 {
+  color: #333;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.string-display {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  background: #f8f9fa;
+  padding: 1rem;
+  border-radius: 8px;
+  border: 2px solid #e9ecef;
+}
+
+.generated-string {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+  word-break: break-all;
+  flex: 1;
+  text-align: center;
+  font-family: 'Courier New', monospace;
+}
+
+.controls-section {
+  background: white;
+  border-radius: 10px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.control-group {
+  margin-bottom: 1.5rem;
+}
+
+.control-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.control-group input[type="range"] {
+  width: 100%;
+  margin-bottom: 0.5rem;
+  height: 6px;
+  border-radius: 3px;
+  background: #e9ecef;
+  outline: none;
+}
+
+.number-input {
+  width: 80px;
+  padding: 0.5rem;
+  border: 2px solid #e9ecef;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.checkbox-group {
+  margin-bottom: 2rem;
+}
+
+.checkbox-group h3 {
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.checkbox-group label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+  color: #555;
+}
+
+.checkbox-group input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.generate-btn, .reset-btn, .copy-btn {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.generate-btn {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  flex: 2;
+}
+
+.reset-btn {
+  background: #6c757d;
+  color: white;
+  flex: 1;
+}
+
+.copy-btn {
+  background: #28a745;
+  color: white;
+  min-width: 100px;
+}
+
+.copy-btn.small {
+  padding: 0.5rem 1rem;
+  min-width: 80px;
+  font-size: 0.9rem;
+}
+
+.copy-btn.copied {
+  background: #218838;
+}
+
+.generate-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.reset-btn:hover {
+  background: #5a6268;
+}
+
+.copy-btn:hover:not(.copied) {
+  background: #218838;
+}
+
+.multiple-strings-section {
+  background: white;
+  border-radius: 10px;
+  padding: 2rem;
+}
+
+.multiple-strings-section h3 {
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.strings-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.string-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border: 1px solid #e9ecef;
+}
+
+.string-index {
+  font-weight: bold;
+  color: #667eea;
+  min-width: 30px;
+}
+
+.string-value {
+  flex: 1;
+  font-family: 'Courier New', monospace;
+  word-break: break-all;
+  color: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .random-string-generator {
+    padding: 1rem;
+  }
+  
+  .generator-container {
+    padding: 1rem;
+  }
+  
+  .string-display {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .copy-btn {
+    width: 100%;
+  }
+  
+  .action-buttons {
+    flex-direction: column;
+  }
+  
+  .string-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  
+  .string-item .copy-btn {
+    align-self: flex-end;
+  }
+}
